@@ -1,0 +1,134 @@
+/* Reset and Base Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+    
+    body {
+    font-family: Arial, sans-serif;
+    background-color: #222;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+    }
+    
+    /* Centered Heading Styling */
+    .heading {
+    color: #f0f0f0;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    }
+    
+    
+    /* Table Styling */
+    .table-of-content {
+    width: 100%;
+    max-width: 550px;
+    height: 580px;
+    background-color: #333;
+    border: 2px solid transparent;
+    color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    border-collapse: collapse;
+    }
+    
+    /* Header Row Styling */
+    th {
+    background-color: #444;
+    padding: 12px;
+    font-weight: bold;
+    color: #ffd700;
+    text-align: center;
+    }
+    
+    /* Table Row and Cell Styling */
+    td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #555;
+    }
+    
+    tr:nth-child(even) {
+    background-color: #3a3a3a;
+    }
+    
+    /* Link Styling */
+    a {
+    color: #4caf50;
+    text-decoration: none;
+    font-weight: bold;
+    }
+    
+    a:hover {
+    color: #66ff66;
+    text-decoration: underline;
+    }
+    
+    /* Responsive Design */
+    @media (max-width: 600px) {
+    .table-of-content, th, td {
+    font-size: 14px;
+    }
+    }
+/* Glowing Border Container */
+.glowing-border {
+    padding: 7px; /* Keep original padding */
+    position: relative;
+    background-color: #151320;
+    overflow: hidden;
+    display: inline-block;
+    margin-top: 100px;
+}
+
+/* Glowing Border Animation */
+.glowing-border::before,
+.glowing-border::after {
+    content: '';
+    position: absolute;
+    width: calc(100% + 500px); /* Increased width for a massive glow */
+    height: calc(100% + 500px); /* Increased height to match the width */
+    top: -325px; /* Adjusted to keep it centered */
+    left: -325px; /* Adjusted to keep it centered */
+    background: linear-gradient(45deg, #ffff00, #00ff00, #0099ff, #001aff, #a200ff, #ff0055, #ff0000, #ffff00);
+    background-size: 1005%; /* Keep original background size */
+    z-index: -1;
+}
+
+/* Main Glow Animation */
+.glowing-border::before {
+    animation: borderMove 12s linear infinite, rotate 6s linear infinite;
+}
+
+/* Blur Effect */
+.glowing-border::after {
+    filter: blur(150px); /* Keep original blur */
+    animation: borderMove 12s linear infinite, rotate 6s linear infinite;
+}
+
+@keyframes borderMove {
+    0% {
+        background-position: 0 0;
+    }
+    100% {
+        background-position: 1000%;
+    }
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
