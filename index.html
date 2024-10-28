@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        /* Basic styling for the body */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+        /* Styling for the calculator container */
+        .calculator {
+            text-align: center;
+            background-color: #010002;
+            border-radius: 20px;
+            padding: 25px 2.5px 40px;
+            height: 470px;
+            width: 370px;
+        }
+
+        /* Styling for buttons */
+        button {
+            border-radius: 50%;
+            border: none;
+            font-size: 30px;
+            width: 73px;
+            height: 73px;
+            margin: 5px;
+            color: #FBF8FC;
+            cursor: pointer;
+        }
+
+        /* Styling for the 0 button */
+        .no0 {
+            background-color: #353235;
+            width: 150px;
+            border-radius: 100px;
+        }
+
+        /* Secondary button styling */
+        .se {
+            background-color: #A7A4A7;
+            color: #070407;
+        }
+
+        /* Operator button styling */
+        .sp {
+            background-color: #ff9301;
+        }
+
+        /* Number button styling */
+        .no {
+            background-color: #343134;
+        }
+
+        /* Button hover effect */
+        button:hover {
+            opacity: 0.9;
+        }
+
+        /* Input field styling */
+        input {
+            width: 83.3%;
+            height: 40px;
+            margin-bottom: 10px;
+            font-size: 22px;
+            border: none;
+            border-radius: 5px;
+            padding: 5px;
+            background-color: #fff;
+            text-align: right;
+        }
+    </style>
+    <script src="calculator.js" defer></script>
+</head>
+<body>
+    <script src="calculator.js" defer></script>
+    <div class="calculator">
+        <input type="text" placeholder="0" />
+
+        <!-- Calculator buttons -->
+        <div>
+            <button class="se">AC</button>
+            <button class="se">+/-</button>
+            <button class="se">%</button>
+            <button class="se">÷</button>
+        </div>
+        <div>
+            <button class="no">7</button>
+            <button class="no">8</button>
+            <button class="no">9</button>
+            <button class="sp">×</button>
+        </div>
+        <div>
+            <button class="no">4</button>
+            <button class="no">5</button>
+            <button class="no">6</button>
+            <button class="sp">-</button>
+        </div>
+        <div>
+            <button class="no">1</button>
+            <button class="no">2</button>
+            <button class="no">3</button>
+            <button class="sp">+</button>
+        </div>
+        <div>
+            <button class="no0">0</button>
+            <button class="no">.</button>
+            <button class="sp">=</button>
+        </div>
+    </div>
+</body>
+</html>
